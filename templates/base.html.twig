@@ -1,19 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
 
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('build/style.css') }}">
-            
-        {% endblock %}
-    
-        {% block javascripts %}
-    
-      
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('build/style.css') }}">
+
+    {% endblock %}
+
+    {% block javascripts %}
+
+    {% endblock %}
+
+</head>
+
+<header>
+
+    <div class="d-flex mb-2">
+        <a href="/"><img src="logo.png" alt="{{ 'LOGO' }}" class="p-2"></a>
+
+        <form action="/search" class="ms-auto p-2">
+            <input type="text" name="q" placeholder="Pesquisar">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <div class="d-flex w-100 p-3 fw-bold justify-content-center bg-primary bg-gradient">
+        <nav class="">
+            <a href="#" class="p-2 text-light text-decoration-none link-dark">Notícias</a>
+            <a href="#" class="p-2 text-light text-decoration-none link-dark">Esportes</a>
+            <a href="#" class="p-2 text-light text-decoration-none link-dark">Entretenimento</a>
+            <a href="#" class="p-2 text-light text-decoration-none link-dark">Opinião</a>
+        </nav>
+
+    </div>
+</header>
+
+<body class="">
+    {% block body %}{% endblock %}
+</body>
+
+<div class="d-flex flex-column m-3 ">
+    <footer class="d-flex flex-column items-center rounded-lg bg-primary p-8 sm:items-stretch rounded">
+
+        <article class="d-flex mb-4 justify-content-between ">
+
+            <div class="d-flex flex-column text-sm text-light text-decoration-none p-2">
+                <a href="#" class="mb-3 fw-bold text-light text-decoration-none">Empresa</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Sobre nós</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Confiança, Segurança e Proteção</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Contate-nos</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Trabalhe Conosco</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Comunidade</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Acessibilidade</a>
+            </div>
+
+            <div class="d-flex flex-column text-sm text-light text-decoration-none p-2 ">
+                <a href="#" class="mb-3 fw-bold text-light text-decoration-none">Pagamento</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Compre com Pontos</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Meios de Pagamento</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Cartão de Crédito</a>
+            </div>
+
+            <div class="d-flex flex-column text-sm text-light text-decoration-none p-2 ">
+                <a href="#" class="mb-3 fw-bold text-light text-decoration-none">Deixe-nos ajudar você</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Sua conta</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Meus Pedidos</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Frete e prazo de entrega</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Devoluções e reembolsos</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Gerencie seu conteúdo e dispositivos</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Ajuda</a>
+            </div>
+
+            <div class="d-flex flex-column text-sm text-light text-decoration-none p-2 gap-1">
+                <a href="#" class="mb-3 fw-bold text-light text-decoration-none">Dúvidas</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Portal de Privacidade</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Termos e Condições de Uso</a>
+                <a class="flex-wrap decoration-solid text-light text-decoration-none link-dark" href="#">Prepare-se para a BlackFriday</a>
+            </div>
+
+        </article>
+
+        <hr class="mt-10 ml-10 mr-10 border border-white">
+
+        <div class="d-flex flex-column justify-content-between ml-10 sm:flex-row text-sm text-light p-2">
+            <p class="text-xs">© 2023 Gustavo, Hedrik e inc. Todos os direitos reservados para Jornal.</p>
+            <div class="d-flex items-center">
+                <a href="#"> <box-icon size="md" name='instagram-alt' type='logo' color='#ffffff'></box-icon> </a>
+                <a href="#"> <box-icon size="md" name='linkedin-square' type='logo' color='#ffffff'></box-icon> </a>
+                <a href="#"> <box-icon size="md" name='facebook-circle' type='logo' color='#ffffff'></box-icon> </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
 </html>

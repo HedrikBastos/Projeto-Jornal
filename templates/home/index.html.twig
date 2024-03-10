@@ -1,11 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% block title %}
-    <div class="badge bg-secondary">Home Aqui</div>
-    {% endblock %}
-   
+{% block title %}
+
+{% endblock %}
+
+<main>
+    <section class="">
+        {#% for artigo in artigos %#}
+        <article>
+            <h2>{{ 'titulo.artigo' }}</h2>
+            <img src="{{ 'imagem.artigo' }}" alt="{{ 'imagem.artigoTitulo' }}">
+            <p>{{ 'artigo.resumo' }}</p>
+            <a href="{{ 'artigo.url' }}">Ler mais</a>
+        </article>
+        {#% endfor %#}
+    </section>
+    <section class="d-flex align-items-end flex-column mb-3">
+        <h3 class="p-2">Últimas Notícias</h3>
+        <ul class="p-3">
+            {#% for article in latest_news %#}
+            <li class="p-2 fw-bold"><a href="{{ 'artigo.url' }}">{{ 'artigo' }}</a></li>
+            {#% endfor %#}
+        </ul>
+    </section>
+    <section>
+        <h3>Destaques do Dia</h3>
+        <ul>
+            {#% for article in featured_articles %#}
+            <li><a href="{{ 'artigo.url' }}">{{ 'artigo.titulo' }}</a></li>
+            {#% endfor %#}
+        </ul>
+        <div class="ad">
+            <img src="ad.png" alt="Anúncio">
+        </div>
+    </section>
+</main>
 
 
-    
+
 {% endblock %}
