@@ -6,11 +6,11 @@
 
     {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('build/style.css') }}">
-
+    
     {% endblock %}
 
     {% block javascripts %}
-
+    {{ encore_entry_script_tags('app') }}
     {% endblock %}
 
 </head>
@@ -20,12 +20,50 @@
     <div class="d-flex mb-2">
         <a href="/"><img src="logo.png" alt="{{ 'LOGO' }}" class="p-2"></a>
 
-        <form action="/search" class="ms-auto p-2">
-            <input type="text" name="q" placeholder="Pesquisar">
-            <button type="submit">Buscar</button>
-        </form>
+
+              <form class="d-flex ms-auto p-2" role="search">
+                <input class="form-control me-2" type="search" placeholder="Digite aqui" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+           
+        
     </div>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Ação</a>
+                <a class="dropdown-item" href="#">Outra ação</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Algo mais aqui</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Desativado</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </nav>
     <div class="d-flex w-100 p-3 fw-bold justify-content-center bg-primary bg-gradient">
         <nav class="">
             <a href="#" class="p-2 text-light text-decoration-none link-dark">Notícias</a>
@@ -37,7 +75,7 @@
     </div>
 </header>
 
-<body class="">
+<body>
     {% block body %}{% endblock %}
 </body>
 
@@ -85,7 +123,7 @@
         <hr class="mt-10 ml-10 mr-10 border border-white">
 
         <div class="d-flex flex-column justify-content-between ml-10 sm:flex-row text-sm text-light p-2">
-            <p class="text-xs">© 2023 Gustavo, Hedrik e inc. Todos os direitos reservados para Jornal.</p>
+            <p class="text-xs">© 2023 user1, user2 e inc. Todos os direitos reservados para Jornal.</p>
             <div class="d-flex items-center">
                 <a href="#"> <box-icon size="md" name='instagram-alt' type='logo' color='#ffffff'></box-icon> </a>
                 <a href="#"> <box-icon size="md" name='linkedin-square' type='logo' color='#ffffff'></box-icon> </a>

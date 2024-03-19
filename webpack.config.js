@@ -18,8 +18,10 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
     .enableVersioning(Encore.isProduction())
     .enableSassLoader()
-    .addStyleEntry('style.css','./assets/styles/app.scss')
+    .addStyleEntry('style', './assets/styles/global.scss')  
+    .addEntry('app', './assets/js/app.js')                                   
 
-;
+
+    ;
 
 module.exports = Encore.getWebpackConfig();
